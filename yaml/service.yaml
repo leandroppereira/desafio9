@@ -1,11 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: exam-chart
-  namespace: mychart
+  name: myapp
   labels:
-    app.kubernetes.io/instance: exam-chart
-    app.kubernetes.io/name: exam-chart
+    app.kubernetes.io/instance: myapp
+    app.kubernetes.io/name: myapp
 spec:
   ports:
     - name: http
@@ -13,5 +12,5 @@ spec:
       port: 8080
       targetPort: http
   selector:
-    app.kubernetes.io/instance: exam-chart
-    app.kubernetes.io/name: exam-chart
+    app.kubernetes.io/instance: myapp
+    app.kubernetes.io/name: myapp
