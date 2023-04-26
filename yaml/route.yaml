@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: exam-chart
+  labels:
+    app.kubernetes.io/instance: exam-chart
+    app.kubernetes.io/name: exam-chart
+
+spec:
+  to:
+    kind: Service
+    name: exam-chart
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
